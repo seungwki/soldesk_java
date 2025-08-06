@@ -22,7 +22,7 @@ public class Example5 {
 			user = "우수 고객";
 			break;
 		default:
-			user = "일반 고객";
+			user = "일반 고객"; 
 			break;
 		}
 		sc.close();
