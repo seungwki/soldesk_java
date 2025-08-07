@@ -7,34 +7,26 @@ public class Book {
 
 	// 생성자(Constructor) : 클래스와 이름이 같은 메서드
 	public Book() {// 기본생성자
-		name = "!nameless";
-		author = "!authorless";
+//		name = "!nameless";
+//		author = "!authorless";
 	}
 
 	public Book(String name, String author) {// 인자 추가한 생성자
 		this.name = name;
 		this.author = author;
 	}
-	public Book(String name) {// 인자 추가한 생성자
-		this.name = name;
-	}
 	// 메서드
 	// Getter
-
-	// Setter
-
 	public String getName() {
 		return name;
 	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public String getAuthor() {
 		return author;
 	}
-
+	// Setter
+	public void setName(String name) {
+		this.name = name;
+	}
 	public void setAuthor(String author) {
 		this.author = author;
 	}
