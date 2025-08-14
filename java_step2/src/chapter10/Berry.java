@@ -1,0 +1,14 @@
+package chapter10;
+
+public class Berry extends Fruit{
+	private String name;
+	private String size;
+	public void set2(String a, String b) {
+		name=a;
+		size=b;
+	}
+	public void display2() {
+		System.out.println("이름 : "+name);
+		System.out.println("크기 : "+size);
+	}
+}

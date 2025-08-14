@@ -13,6 +13,16 @@ public class StaticTest2 {
 		obj2.num2 = 20;
 		System.out.println(obj1.num1);
 		System.out.println(obj1.num2);
+		obj2.num1 = 100;
+		obj2.num2 = 200;
+		System.out.println(obj2.num1);
+		System.out.println(obj2.num2);
+		System.out.println(obj1.num1);
+		System.out.println(obj1.num2);
+		obj2.num1 = 100;
+		obj2.num2 = 300;
+		System.out.println(obj1.num1);
+		System.out.println(obj1.num2);
 		System.out.println(obj2.num1);
 		System.out.println(obj2.num2);
 	}
