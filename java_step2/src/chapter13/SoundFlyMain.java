@@ -15,6 +15,9 @@ public class SoundFlyMain {
 //		flyAnimal(aa);//Bird()는 fly 의 implement지만 AA로 선언한 이상 fly의 구현체로 쳐주진 않음
 //		Fly bird = new Bird();
 //		soundAnimal(bird);//마찬가지
+		Bird bird = new Bird();
+		soundAnimal(bird);
+		flyAnimal(bird);
 		System.out.println("========chicken========");
 		aa = new Chicken();
 		soundAnimal(aa);
