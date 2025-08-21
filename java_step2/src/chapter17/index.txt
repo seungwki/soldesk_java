@@ -1,0 +1,21 @@
+Full name : "Collection Framework"
+	기본적으로 프레임워크이다
+
+collection(interface)
+	List(interface)
+		Array List
+		Linked List
+		Vector(Deprecated)
+	Queue(interface)
+		Deque(interface)
+		ArrayDeque
+	Set(interface)
+		HashSet
+			Linked Hashset
+		TreeSet
+	
+Map(interface)
+	HashMap
+		LinkedHashMap
+	TreeMap
+	Properties(Deprecated)
