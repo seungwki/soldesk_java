@@ -14,8 +14,8 @@ collection(interface)
 			Linked Hashset
 		TreeSet
 	
-Map(interface) : Key-Value 구조.
-	HashMap
-		LinkedHashMap
-	TreeMap
+Map(interface) : Key-Value 구조. 순서x, 키-중복x, 값-중복o
+	HashMap : 순서 x
+		LinkedHashMap : 입력순서 o
+	TreeMap : 정렬 상태를 유지.
 	Properties(Deprecated)
