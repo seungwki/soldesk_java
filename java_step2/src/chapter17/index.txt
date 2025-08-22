@@ -2,19 +2,19 @@ Full name : "Collection Framework"
 	기본적으로 프레임워크이다
 
 collection(interface)
-	List(interface)
+	List(interface) : 순서 보장 o, 중복 o
 		Array List
 		Linked List
 		Vector(Deprecated)
-	Queue(interface)
+	Queue(interface) : First-in, First-Out(FIFO==선입선출).
 		Deque(interface)
 		ArrayDeque
-	Set(interface)
+	Set(interface) : 순서 보장 x, 중복 x
 		HashSet
 			Linked Hashset
 		TreeSet
 	
-Map(interface)
+Map(interface) : Key-Value 구조.
 	HashMap
 		LinkedHashMap
 	TreeMap
