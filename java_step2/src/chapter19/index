@@ -1,0 +1,7 @@
+중첩클래스(nested class)
+	non-static class
+		inner class ->		인스턴스 변수와 같은 위치를 갖는다.
+		local class ->		지역 변수 위치. 지역 변수처럼 코드 블럭 안에서 정의된다.
+		anonymous class ->	local class의 하위 항목.
+	static class
+		static nested class -> 정적 변수와 같은 위치를 갖는다. 정적 변수처럼 앞에 static이 붙는다.

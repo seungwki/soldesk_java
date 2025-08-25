@@ -28,7 +28,7 @@ public class MemberHashMap {
 		while (iter.hasNext()) {
 			int key = iter.next();
 			String member = map.get(key);
-			System.out.println(member);
+			System.out.println(member+", hash : "+member.hashCode());
 		}
 		System.out.println();
 	}

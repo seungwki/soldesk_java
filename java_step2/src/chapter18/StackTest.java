@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class StackTest {
 	public static void main(String[] args) {
-		Object obj;
+//		Object obj;
 		Stack<Object> st = new Stack<>();
 
 		if (st.empty()) {

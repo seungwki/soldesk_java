@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import javax.swing.SortingFocusTraversalPolicy;
+// 이거 구조 바꿔야 됨.
 
 public class UserMain {
 	public static void main(String[] args) {

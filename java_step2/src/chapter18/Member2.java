@@ -9,6 +9,7 @@ public class Member2 {
 	public Member2(int memberId, String name) {
 		this.memberId = memberId;
 		this.name = name;
+		System.out.println("name >> "+name+"\tid >> "+memberId+"\thash >> "+this.hashCode());
 	}
 
 	public int getMemberId() {
@@ -29,7 +30,8 @@ public class Member2 {
 
 	@Override
 	public String toString() {
-		return "Member [memberId=" + memberId + ", name=" + name + "], hash>> " + this.hashCode() + "\n";
+//		return "Member [memberId=" + memberId + ", name=" + name + "]\n";
+		return "Member [memberId=" + memberId + ", name=" + name + ", hash= " + this.hashCode() + "\n";
 	}
 
 	@Override
