@@ -3,7 +3,6 @@ package etctest;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -26,7 +25,7 @@ public class KtAnalyzer {
 				for (int i = 0; i < len; i++) {
 					if(line.charAt(i)=='[') {save = true;}//좌대괄호면 기록 시작
 					if(line.charAt(i)==']') {save = false;}//우대괄호면 기록 종료
-					if(save) {//저장 상태면 char 받아서 append
+					if(save&&line.charAt(i)!='[') {//저장 상태면 char 받아서 append
 						sb.append(line.charAt(i));
 					}
 					if(!save && sb.length()!=0) {//저장상태가 아니고 sb에 뭐 들어있으면 저장하시오
@@ -41,6 +40,7 @@ public class KtAnalyzer {
 			}//while
 			//파일 기록하기
 //			for (Map.Entry<String, Integer> kv : counter) {}
+			System.out.println(counter);
 			br.close();
 		} catch (Exception e) {
 			System.out.println(e);
@@ -51,3 +51,10 @@ public class KtAnalyzer {
 		
 	}//main
 }//class
+
+
+/*TODO
+ * 시간은 제거(regex)
+ * 날짜 별(regex) 발신자 수량 체크
+ * ?
+ */

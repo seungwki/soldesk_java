@@ -1,0 +1,13 @@
+모든 클래스의 조상은 Object Class
+throwable도 있고 Exception도 있고 Error도 있다.
+
+Exception은 크게
+	Runtime Exception 과 : 컴파일러가 체크해지지 않는다==컴파일은 된다.
+		ArithmeticException
+		ClassCastException
+		Null Pointer Exception
+		Index out of bounds exception
+		... 등등 많음
+	Compile-checked Exception이 있다. : 컴파일러가 체크해주므로 해결해주지 않으면(던지건 어쩌건) 컴파일 조차 되지 않는다.
+		IOException
+		ClassNotFoundException 등등... 많음

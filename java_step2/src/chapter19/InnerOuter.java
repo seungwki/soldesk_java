@@ -4,7 +4,7 @@ public class InnerOuter {
 	private static int outClassValue;
 	private int outInstanceValue;
 
-	// 내부 클래스 : 인스턴스 변수와 비슷하게 생각하면 된다
+	// 내부 클래스 : 인스턴스 변수와 비슷하게 생각하면 된다. 인스턴스 클래스
 	class Inner {
 		private int innerInstanceValue = 1;
 
