@@ -29,7 +29,7 @@ public class Fedex {
 
 			// 박스 그리드 초기화
 			for (int i = 0; i < box.length; i++) {// 행
-				for (int j = 0; j < box[i].length; j++) {// 열
+				for (int j = (i % 2 != 0 ? w - 1 : 0); j < w; j += i % 2 != 0 ? -1 : 1) {// 열
 					if (i * w + j > n) {
 						box[i][j] = 1;
 					}
@@ -40,7 +40,9 @@ public class Fedex {
 			/*
 			 * num의 좌표 -> i -> num/w j -> i%2==0?정:역
 			 */
-
+			for (int i = num / w; i < box.length; i++) {
+				answer += box[i][num % w];
+			}
 			return answer;
 		}
 	}// class solution
