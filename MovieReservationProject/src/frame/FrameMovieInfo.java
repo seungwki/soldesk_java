@@ -1,5 +1,6 @@
 package frame;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.TextArea;
@@ -27,7 +28,10 @@ public class FrameMovieInfo extends JPanel {
 		add(img);
 
 		// 영화 관련 정보 텍스트
-		TextArea story = new TextArea(movie.getStory(), 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
+
+		TextArea story = new TextArea("\n◎영화제목" + "\n" + " " + movie.getName() + "\n\n" + "◎평 점" + "\n" + " "
+				+ String.format("%.1f", movie.getScore()) + " / 5 점\n\n" + "◎줄 거 리" + "\n" + " " + movie.getStory(), 0,
+				0, TextArea.SCROLLBARS_VERTICAL_ONLY);
 		story.setSize(580, 280);
 		story.setLocation(0, 375);
 		story.setBackground(new Color(0xFFD700));
@@ -71,13 +75,51 @@ public class FrameMovieInfo extends JPanel {
 				if (isFirstPageMovie(movieName)) {
 					FrameBase.getInstance(new FrameMovieSelect());
 				} else {
-					FrameBase.getInstance(new FrameMovieSelect());
+					FrameBase.getInstance(new FrameMovieSelect2());
 				}
 			}
 
-			private boolean isFirstPageMovie(String movieName) {
-				return false;
+		});
+
+		JButton btnHome = new JButton("처음 화면으로");
+		btnHome.setBackground(new Color(0xA6A6A6));
+		btnHome.setSize(183, 87);
+		btnHome.setLocation(198, 0);
+		btnHome.setFont(new Font("나눔고딕코딩", Font.BOLD, 22));
+		bottomPanel.add(btnHome);
+
+		btnHome.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				FrameBase.getInstance(new FrameBegin());
 			}
 		});
+
+		JButton btnBuy = new JButton("예매하기");
+		btnBuy.setBackground(new Color(0xA6A6A6));
+		btnBuy.setSize(183, 87);
+		btnBuy.setLocation(391, 0);
+		btnBuy.setFont(new Font("나눔고딕코딩", Font.BOLD, 22));
+		bottomPanel.add(btnBuy);
+
+		btnBuy.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// 예매하기 추가 예정
+//				FrameBase.getInstance(new FrameReservation(movie));
+			}
+		});
+
+		add(bottomPanel, BorderLayout.SOUTH);
 	}// 생성자
+
+	private boolean isFirstPageMovie(String movieName) {
+		String[] firstMovieList = { "라라랜드", "말할수없는비밀", "인사이드아웃", "겨울왕국" };
+		for (int i = 0; i < firstMovieList.length; i++) {
+			if (firstMovieList[i].equals(movieName)) {
+				return true;
+			}
+		}
+		return false;
+	}
 }

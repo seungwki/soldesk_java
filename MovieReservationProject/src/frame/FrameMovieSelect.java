@@ -46,7 +46,7 @@ public class FrameMovieSelect extends JPanel {
 		btnMovie2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				MovieVO movie2 = new MovieDAO().searchMovie("말할 수 없는 비밀");
+				MovieVO movie2 = new MovieDAO().searchMovie("말할수없는비밀");
 				FrameBase.getInstance(new FrameMovieInfo(movie2));
 			}
 		});
