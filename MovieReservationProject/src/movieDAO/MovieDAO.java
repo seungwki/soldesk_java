@@ -104,7 +104,7 @@ public class MovieDAO {
 	}
 
 	// 이미 예매 된 정보인지 검색
-	public boolean dupSear(String name, String time, String seat) {
+	public boolean dupSeat(String name, String time, String seat) {
 		for (int i = 0; i < reserveList.size(); i++) {
 			if (reserveList.get(i).getName().equals(name) && reserveList.get(i).getTime().equals(time)
 					&& reserveList.get(i).getSeat().equals(seat)) {

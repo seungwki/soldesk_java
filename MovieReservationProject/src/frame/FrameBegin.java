@@ -46,5 +46,12 @@ public class FrameBegin extends JPanel {
 				FrameBase.getInstance(new FrameMovieSelect());
 			}
 		});
-	}
+		btnPost.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// 영화 후기 페이지로 연결
+				FrameBase.getInstance(new FrameReviewBoard());
+			}
+		});
+	}// 생성자
 }

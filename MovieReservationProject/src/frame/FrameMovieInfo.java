@@ -48,7 +48,7 @@ public class FrameMovieInfo extends JPanel {
 		btnReview.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// 리뷰 보기 추가 예정
+				new FrameReviewRead(movie);
 			}
 		});
 		add(btnReview);
@@ -106,7 +106,7 @@ public class FrameMovieInfo extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// 예매하기 추가 예정
-//				FrameBase.getInstance(new FrameReservation(movie));
+				FrameBase.getInstance(new FrameReservation(movie));
 			}
 		});
 
