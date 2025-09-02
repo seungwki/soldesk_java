@@ -65,7 +65,7 @@ public class MovieVO {
 
 //	public void setReview(review) {
 	public void setReview() {
-		this.review += this.latestScore + "점\t" + this.review + ">\t" + this.reviewShort + "\n";
+		this.review += this.latestScore + "점\t" + this.reviewrName + ">\t" + this.reviewShort + "\n";
 	}
 
 	public String getImg() {

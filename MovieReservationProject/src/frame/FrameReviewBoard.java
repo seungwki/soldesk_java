@@ -45,14 +45,14 @@ public class FrameReviewBoard extends JPanel {
 		dis2.setBorder(new TitledBorder(null, "평점 줄 영화 선택", TitledBorder.LEADING, TitledBorder.TOP, null,
 				new Color(255, 122, 144)));
 
-		JRadioButton movie1 = new JRadioButton("라라랜드");
-		JRadioButton movie2 = new JRadioButton("말할수없는비밀");
-		JRadioButton movie3 = new JRadioButton("인사이드아웃");
-		JRadioButton movie4 = new JRadioButton("겨울왕국");
-		JRadioButton movie5 = new JRadioButton("당신거기있어줄래요");
-		JRadioButton movie6 = new JRadioButton("스파이더맨");
-		JRadioButton movie7 = new JRadioButton("어벤져스");
-		JRadioButton movie8 = new JRadioButton("부산행");
+//		JRadioButton movie1 = new JRadioButton("라라랜드");
+//		JRadioButton movie2 = new JRadioButton("말할수없는비밀");
+//		JRadioButton movie3 = new JRadioButton("인사이드아웃");
+//		JRadioButton movie4 = new JRadioButton("겨울왕국");
+//		JRadioButton movie5 = new JRadioButton("당신거기있어줄래요");
+//		JRadioButton movie6 = new JRadioButton("스파이더맨");
+//		JRadioButton movie7 = new JRadioButton("어벤져스");
+//		JRadioButton movie8 = new JRadioButton("부산행");
 		add(dis2);
 
 		JPanel dis1 = new JPanel();
@@ -149,7 +149,6 @@ public class FrameReviewBoard extends JPanel {
 
 			@Override
 			public void textValueChanged(TextEvent e) {
-
 				if (review.getText().equals("")) {
 					btn.setEnabled(false);
 				} else if (review.getText().length() > 30) {
@@ -159,17 +158,14 @@ public class FrameReviewBoard extends JPanel {
 				} else {
 					btn.setEnabled(true);
 				}
-
 			}
 		});
 
 		// 작성자 이름 창 클릭시 텍스트 힌트 제거
 		reviewName.addFocusListener(new FocusListener() {
-
 			@Override
 			public void focusLost(FocusEvent e) {
 			}
-
 			@Override
 			public void focusGained(FocusEvent e) {
 				if (reviewName.getText().equals("작성자 이름")) {
@@ -198,15 +194,11 @@ public class FrameReviewBoard extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				if (point1.isSelected() || point2.isSelected() || point3.isSelected() || point4.isSelected()
 						|| point5.isSelected()) {
-
 					if (reviewName.getText().equals("")) {
 						reviewName.setText("익명");
-
 					} else if (reviewName.getText().equals("작성자 이름")) {
 						reviewName.setText("익명");
-
 					}
-
 					int num = 0;
 					if (point1.isSelected()) {
 						num = 1;
@@ -219,7 +211,6 @@ public class FrameReviewBoard extends JPanel {
 					} else if (point5.isSelected()) {
 						num = 5;
 					}
-
 					for (int i = 0; i < movie.length; i++) {
 						if (movie[i].isSelected()) {
 							// 작성한 후기를 영화 리스트에 추가

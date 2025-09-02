@@ -9,7 +9,7 @@ public class FileInputStreamTest02 {
 		try (FileReader fr = new FileReader("example.txt")) {
 			int data;
 			while ((data = fr.read()) != -1) {
-				System.out.print((char) data);
+				System.out.print((char) data);//data에 담지 않으면 하나씩 건너 뛴다.
 			} // 한글은 2바이트, fis는 1바이트 단위로 전송하므로 깨진다.
 		} catch (IOException e) {
 			e.printStackTrace();

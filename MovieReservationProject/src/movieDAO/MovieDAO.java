@@ -121,11 +121,12 @@ public class MovieDAO {
 			if (movieList.get(i).getName().equals(movieName)) {
 				thisMovie = movieList.get(i);
 				thisMovie.setReviewrName(reviewerName);//
-				thisMovie.setTotal(score);
-				thisMovie.setScore();
-				thisMovie.setReviewCount();
-				thisMovie.setReview();
 				thisMovie.setReviewShort(reviewContents);
+				thisMovie.setLatestScore(score);
+				thisMovie.setTotal(score);
+				thisMovie.setReviewCount();
+				thisMovie.setScore();
+				thisMovie.setReview();
 			}
 		}
 	}
